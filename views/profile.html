@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人中心 — 竞赛组队平台</title>
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/pages.css">
+</head>
+<body>
+  <main class="site-main">
+    <!-- 可编辑模式（当前用户） -->
+    <div class="container" id="edit-mode" style="display:none;">
+      <div class="profile-layout">
+        <!-- 左侧：编辑表单 -->
+        <div class="profile-form-section">
+          <h2 class="profile-form-section__title">个人简历编辑</h2>
+          <form id="profile-form">
+            <div class="form-group">
+              <label class="form-label" for="name">姓名</label>
+              <input type="text" id="name" class="form-input" placeholder="你的姓名">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="school">学校</label>
+              <input type="text" id="school" class="form-input" placeholder="所在学校">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="major">专业</label>
+              <input type="text" id="major" class="form-input" placeholder="所学专业">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="grade">年级</label>
+              <select id="grade" class="form-select form-input">
+                <option value="">请选择年级</option>
+                <option value="大一">大一</option>
+                <option value="大二">大二</option>
+                <option value="大三">大三</option>
+                <option value="大四">大四</option>
+                <option value="研一">研一</option>
+                <option value="研二">研二</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="skills">技能（逗号分隔）</label>
+              <input type="text" id="skills" class="form-input" placeholder="如：C++, Python, Figma">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="competitions">竞赛经历</label>
+              <textarea id="competitions" class="form-textarea" placeholder="描述你参加过的竞赛及成绩..." style="min-height: 80px;"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="achievements">荣誉成就</label>
+              <textarea id="achievements" class="form-textarea" placeholder="获得的奖项、证书等..." style="min-height: 80px;"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact">联系方式</label>
+              <input type="text" id="contact" class="form-input" placeholder="微信/QQ/邮箱">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bio">个人简介</label>
+              <textarea id="bio" class="form-textarea" placeholder="简单介绍一下自己..." style="min-height: 80px;"></textarea>
+            </div>
+          </form>
+          <div class="profile-actions">
+            <button class="btn" id="save-btn">保存简历</button>
+            <button class="btn btn--outline" id="export-btn">导出 JSON</button>
+            <button class="btn btn--outline" id="clear-btn">清空重置</button>
+          </div>
+        </div>
+
+        <!-- 右侧：简历预览 -->
+        <div class="profile-preview-section">
+          <div class="resume-card" id="resume-preview">
+            <div class="resume-card__header">
+              <h2 class="resume-card__name" id="resume-name">未填写姓名</h2>
+              <p class="resume-card__school" id="resume-school">未填写学校</p>
+            </div>
+            <div class="resume-card__section">
+              <h4 class="resume-card__section-title">基本信息</h4>
+              <p id="resume-basic" style="text-transform: none;">专业：未填写 | 年级：未填写</p>
+            </div>
+            <div class="resume-card__section">
+              <h4 class="resume-card__section-title">技能特长</h4>
+              <div class="resume-card__skills" id="resume-skills">
+                <span class="tag">未填写</span>
+              </div>
+            </div>
+            <div class="resume-card__section">
+              <h4 class="resume-card__section-title">竞赛经历</h4>
+              <p id="resume-competitions" style="font-size: 0.9375rem; text-transform: none;">未填写</p>
+            </div>
+            <div class="resume-card__section">
+              <h4 class="resume-card__section-title">荣誉成就</h4>
+              <p id="resume-achievements" style="font-size: 0.9375rem; text-transform: none;">未填写</p>
+            </div>
+            <div class="resume-card__section">
+              <h4 class="resume-card__section-title">联系方式</h4>
+              <p id="resume-contact" style="font-size: 0.9375rem; text-transform: none;">未填写</p>
+            </div>
+            <div class="resume-card__section">
+              <h4 class="resume-card__section-title">个人简介</h4>
+              <p id="resume-bio" style="font-size: 0.9375rem; text-transform: none;">未填写</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 只读模式（其他用户） -->
+    <div class="container" id="view-mode" style="display:none;">
+      <div class="profile-view-layout">
+        <div class="resume-card resume-card--view">
+          <div class="resume-card__header">
+            <div class="resume-card__avatar-large" id="view-avatar"></div>
+            <h2 class="resume-card__name" id="view-name">加载中...</h2>
+            <p class="resume-card__school" id="view-school"></p>
+          </div>
+          <div class="resume-card__section">
+            <h4 class="resume-card__section-title">基本信息</h4>
+            <p id="view-basic" style="text-transform: none;">-</p>
+          </div>
+          <div class="resume-card__section">
+            <h4 class="resume-card__section-title">技能特长</h4>
+            <div class="resume-card__skills" id="view-skills">
+              <span class="tag">-</span>
+            </div>
+          </div>
+          <div class="resume-card__section">
+            <h4 class="resume-card__section-title">竞赛经历</h4>
+            <p id="view-competitions" style="font-size: 0.9375rem; text-transform: none;">-</p>
+          </div>
+          <div class="resume-card__section">
+            <h4 class="resume-card__section-title">荣誉成就</h4>
+            <p id="view-achievements" style="font-size: 0.9375rem; text-transform: none;">-</p>
+          </div>
+          <div class="resume-card__section">
+            <h4 class="resume-card__section-title">联系方式</h4>
+            <p id="view-contact" style="font-size: 0.9375rem; text-transform: none;">-</p>
+          </div>
+          <div class="resume-card__section">
+            <h4 class="resume-card__section-title">个人简介</h4>
+            <p id="view-bio" style="font-size: 0.9375rem; text-transform: none;">-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="../js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "categories": [
+    { "name": "编程", "value": 8 },
+    { "name": "数学建模", "value": 5 },
+    { "name": "创新创业", "value": 6 },
+    { "name": "设计", "value": 4 },
+    { "name": "人工智能", "value": 3 }
+  ],
+  "stats": {
+    "totalCompetitions": 26,
+    "totalTeams": 58,
+    "totalStudents": 142
+  },
+  "competitions": [
+    {
+      "id": 1,
+      "title": "ACM-ICPC 程序设计竞赛",
+      "category": "编程",
+      "description": "国际大学生程序设计竞赛，三人一队，在限定时间内解决算法问题。考察团队协作与编程能力。",
+      "deadline": "2026-06-15",
+      "maxMembers": 3,
+      "tags": ["算法", "C++", "团队合作"],
+      "image": "public/images/acm.svg",
+      "teams": [
+        {
+          "id": 101,
+          "captain": "张三",
+          "title": "求队友！目标省赛银牌",
+          "description": "已有两人，缺一个擅长图论和数据结构的队友。我们有区域赛参赛经验，希望找到有算法竞赛基础的同学。",
+          "skillsRequired": ["图论", "动态规划", "数据结构"],
+          "currentMembers": 2,
+          "maxMembers": 3,
+          "contact": "微信: zhangsan_01",
+          "createdAt": "2026-04-20",
+          "score": 92
+        },
+        {
+          "id": 102,
+          "captain": "王芳",
+          "title": "ACM 新手队，一起学习进步",
+          "description": "两个大二学生，刚入门算法竞赛，希望找一个同样热爱编程的队友，一起刷题备赛。",
+          "skillsRequired": ["C/C++", "基础算法"],
+          "currentMembers": 2,
+          "maxMembers": 3,
+          "contact": "QQ: 123456789",
+          "createdAt": "2026-04-22",
+          "score": 65
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "全国大学生数学建模竞赛",
+      "category": "数学建模",
+      "description": "用数学方法和计算机技术解决实际问题，三人一队，分工为建模、编程、写作。",
+      "deadline": "2026-09-10",
+      "maxMembers": 3,
+      "tags": ["数学", "MATLAB", "论文写作"],
+      "image": "public/images/math.svg",
+      "teams": [
+        {
+          "id": 201,
+          "captain": "李明",
+          "title": "数学建模缺编程手",
+          "description": "我负责建模，另一个同学负责论文写作，急需一个会 MATLAB 或 Python 的编程手。",
+          "skillsRequired": ["MATLAB", "Python", "数据分析"],
+          "currentMembers": 2,
+          "maxMembers": 3,
+          "contact": "邮箱: liming@edu.cn",
+          "createdAt": "2026-05-01",
+          "score": 78
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "互联网+ 大学生创新创业大赛",
+      "category": "创新创业",
+      "description": "中国高校最大的创新创业赛事，鼓励跨学科组队，将创意转化为商业计划。",
+      "deadline": "2026-07-20",
+      "maxMembers": 5,
+      "tags": ["创业", "商业计划", "路演"],
+      "image": "public/images/chuangye.svg",
+      "teams": [
+        {
+          "id": 301,
+          "captain": "赵雪",
+          "title": "AI+教育赛道，招募技术合伙人",
+          "description": "项目方向是 AI 辅助个性化学习平台，已有初步原型。需要前端开发和产品设计的同学加入。",
+          "skillsRequired": ["前端开发", "产品设计", "机器学习"],
+          "currentMembers": 3,
+          "maxMembers": 5,
+          "contact": "微信: zhaoxue_ai",
+          "createdAt": "2026-05-05",
+          "score": 88
+        },
+        {
+          "id": 302,
+          "captain": "孙磊",
+          "title": "环保科技项目招人",
+          "description": "聚焦校园垃圾分类智能化方案，已有指导老师支持。欢迎有硬件或软件开发经验的同学。",
+          "skillsRequired": ["嵌入式开发", "Python", "硬件设计"],
+          "currentMembers": 2,
+          "maxMembers": 5,
+          "contact": "QQ: 987654321",
+          "createdAt": "2026-05-08",
+          "score": 72
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "全国大学生广告设计大赛",
+      "category": "设计",
+      "description": "以创意设计为核心，涵盖平面、视频、交互等多种设计方向。",
+      "deadline": "2026-08-01",
+      "maxMembers": 4,
+      "tags": ["平面设计", "PS", "创意"],
+      "image": "public/images/design.svg",
+      "teams": [
+        {
+          "id": 401,
+          "captain": "周涵",
+          "title": "视觉传达方向组队",
+          "description": "寻找擅长 UI/UX 或插画设计的队友，一起冲击国赛。我们已经有两个平面设计师。",
+          "skillsRequired": ["UI设计", "插画", "Figma"],
+          "currentMembers": 2,
+          "maxMembers": 4,
+          "contact": "微信: zhouhan_design",
+          "createdAt": "2026-05-10",
+          "score": 81
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "中国大学生计算机设计大赛",
+      "category": "编程",
+      "description": "涵盖软件应用开发、物联网、人工智能等多个赛道的综合计算机竞赛。",
+      "deadline": "2026-06-30",
+      "maxMembers": 3,
+      "tags": ["软件开发", "Java", "数据库"],
+      "image": "public/images/cs.svg",
+      "teams": [
+        {
+          "id": 501,
+          "captain": "吴杰",
+          "title": "Web 应用开发赛道招队友",
+          "description": "做一个校园二手交易平台，已有后端框架。缺一个前端和一个测试。",
+          "skillsRequired": ["Vue/React", "MySQL", "软件测试"],
+          "currentMembers": 1,
+          "maxMembers": 3,
+          "contact": "邮箱: wujie@stu.edu.cn",
+          "createdAt": "2026-05-12",
+          "score": 55
+        }
+      ]
+    }
+  ]
+}

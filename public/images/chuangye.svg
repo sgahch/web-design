@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <pattern id="stripe" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#FFD600" stroke-width="2" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#0a0a0a"/>
+  <rect width="800" height="400" fill="url(#stripe)"/>
+  <!-- 装饰 -->
+  <rect x="0" y="340" width="800" height="60" fill="#FFD600"/>
+  <!-- 灯泡/创意图标 -->
+  <circle cx="660" cy="140" r="70" fill="none" stroke="#FFD600" stroke-width="4"/>
+  <path d="M630,180 L690,180 L680,200 L640,200 Z" fill="none" stroke="#FFD600" stroke-width="3"/>
+  <line x1="645" y1="200" x2="645" y2="215" stroke="#FFD600" stroke-width="2"/>
+  <line x1="660" y1="200" x2="660" y2="220" stroke="#FFD600" stroke-width="2"/>
+  <line x1="675" y1="200" x2="675" y2="215" stroke="#FFD600" stroke-width="2"/>
+  <!-- 光芒 -->
+  <line x1="660" y1="50" x2="660" y2="30" stroke="#FFD600" stroke-width="3" opacity="0.5"/>
+  <line x1="720" y1="80" x2="740" y2="65" stroke="#FFD600" stroke-width="3" opacity="0.5"/>
+  <line x1="740" y1="140" x2="760" y2="140" stroke="#FFD600" stroke-width="3" opacity="0.5"/>
+  <line x1="600" y1="80" x2="580" y2="65" stroke="#FFD600" stroke-width="3" opacity="0.5"/>
+  <line x1="580" y1="140" x2="560" y2="140" stroke="#FFD600" stroke-width="3" opacity="0.5"/>
+  <!-- 火箭装饰 -->
+  <text x="480" y="280" fill="#FFD600" font-family="system-ui" font-size="40" opacity="0.3">🚀</text>
+  <text x="530" y="310" fill="#FFD600" font-family="system-ui" font-size="16" opacity="0.3">STARTUP</text>
+  <!-- 标题 -->
+  <text x="40" y="160" fill="#fff" font-family="system-ui" font-size="48" font-weight="900" letter-spacing="2">互联网+</text>
+  <text x="40" y="210" fill="#FFD600" font-family="system-ui" font-size="28" font-weight="700">大学生创新创业大赛</text>
+  <text x="40" y="250" fill="#aaa" font-family="system-ui" font-size="16" opacity="0.6">CHINA COLLEGE STUDENTS</text>
+  <text x="40" y="272" fill="#aaa" font-family="system-ui" font-size="16" opacity="0.6">INTERNET+ INNOVATION CONTEST</text>
+  <!-- 底部标签 -->
+  <text x="40" y="370" fill="#0a0a0a" font-family="system-ui" font-size="16" font-weight="900">创意孵化 · 商业计划 · 路演展示</text>
+</svg>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社区 — 竞赛组队平台</title>
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/pages.css">
+</head>
+<body>
+  <main class="site-main">
+    <!-- 社区头部 -->
+    <section class="community-header">
+      <div class="container">
+        <h1>竞赛社区</h1>
+        <p style="color: var(--color-gray-mid); margin-top: 8px; text-transform: none;">组队招募 · 经验分享 · 问题求助</p>
+        <div class="community-tabs" id="community-tabs">
+          <span class="tag active" data-category="all">全部</span>
+          <span class="tag" data-category="组队招募">组队招募</span>
+          <span class="tag" data-category="经验分享">经验分享</span>
+          <span class="tag" data-category="问题求助">问题求助</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 帖子列表 -->
+    <section class="community-content">
+      <div class="container">
+        <div id="posts-list">
+          <!-- JS 动态渲染 -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../js/community.js"></script>
+</body>
+</html>

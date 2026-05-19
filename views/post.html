@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发布组队/帖子 — 竞赛组队平台</title>
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/pages.css">
+</head>
+<body>
+  <main class="site-main">
+    <div class="container">
+      <div class="post-layout">
+        <!-- 左侧：表单 -->
+        <div class="post-form-section">
+          <h2 class="post-form-section__title">发布组队/帖子</h2>
+
+          <!-- 帖子类型切换 -->
+          <div class="post-type-tabs" id="post-type-tabs">
+            <span class="post-type-tab active" data-type="team">组队招募</span>
+            <span class="post-type-tab" data-type="experience">经验分享</span>
+            <span class="post-type-tab" data-type="help">问题求助</span>
+          </div>
+
+          <form id="post-form" novalidate>
+            <!-- 关联竞赛（组队招募时显示） -->
+            <div class="form-group" id="competition-group">
+              <label class="form-label" for="competitionId">关联竞赛 *</label>
+              <select id="competitionId" class="form-select form-input">
+                <option value="">请选择竞赛</option>
+              </select>
+              <div class="form-error" id="competitionId-error"></div>
+            </div>
+
+            <!-- 队伍名称（组队招募时显示） -->
+            <div class="form-group" id="teamName-group">
+              <label class="form-label" for="teamName">队伍名称 *</label>
+              <input type="text" id="teamName" class="form-input" placeholder="2-20 个字符" maxlength="20">
+              <div class="form-error" id="teamName-error"></div>
+            </div>
+
+            <!-- 通用标题（经验分享/问题求助时显示） -->
+            <div class="form-group" id="title-group" style="display:none;">
+              <label class="form-label" for="postTitle">帖子标题 *</label>
+              <input type="text" id="postTitle" class="form-input" placeholder="2-50 个字符" maxlength="50">
+              <div class="form-error" id="postTitle-error"></div>
+            </div>
+
+            <div class="form-group" id="skillsRequired-group">
+              <label class="form-label" for="skillsRequired">技能要求（逗号分隔）</label>
+              <input type="text" id="skillsRequired" class="form-input" placeholder="如：C++, 算法, 团队合作">
+            </div>
+
+            <div class="form-group" id="maxMembers-group">
+              <label class="form-label" for="maxMembers">队伍人数上限 *</label>
+              <select id="maxMembers" class="form-select form-input">
+                <option value="">请选择</option>
+                <option value="2">2 人</option>
+                <option value="3">3 人</option>
+                <option value="4">4 人</option>
+                <option value="5">5 人</option>
+                <option value="6">6 人</option>
+                <option value="7">7 人</option>
+                <option value="8">8 人</option>
+                <option value="9">9 人</option>
+                <option value="10">10 人</option>
+              </select>
+              <div class="form-error" id="maxMembers-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="description">内容描述 *</label>
+              <textarea id="description" class="form-textarea" placeholder="10-500 字，描述你的队伍情况或分享内容..." maxlength="500"></textarea>
+              <div class="form-error" id="description-error"></div>
+            </div>
+
+            <div class="form-group" id="contact-group">
+              <label class="form-label" for="contact">联系方式 *</label>
+              <input type="text" id="contact" class="form-input" placeholder="格式：微信: your_id 或 QQ: 123456">
+              <div class="form-error" id="contact-error"></div>
+            </div>
+
+            <button type="submit" class="btn btn--block" id="submit-btn">发布组队信息</button>
+          </form>
+        </div>
+
+        <!-- 右侧：预览 + 得分 -->
+        <div class="post-preview-section">
+          <div class="preview-card">
+            <h3 class="preview-card__title">实时预览</h3>
+            <div id="preview-content">
+              <p style="color: var(--color-gray-mid); font-size: 0.875rem; text-transform: none;">填写左侧表单，这里会实时预览你的内容。</p>
+            </div>
+          </div>
+          <div class="score-display" id="score-section">
+            <div class="score-display__number" id="score-number">0</div>
+            <div class="score-display__label">组队吸引力得分</div>
+            <div class="score-bar" style="margin-top: 12px;">
+              <div class="score-bar__fill" id="score-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 提交成功弹窗 -->
+  <div id="success-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:200; align-items:center; justify-content:center;">
+    <div style="background:var(--color-white); border:var(--border-heavy); box-shadow:var(--shadow-pop); padding:var(--space-xl); max-width:400px; width:90%; text-align:center;">
+      <h3 style="margin-bottom:var(--space-md);">发布成功！</h3>
+      <p style="color:var(--color-gray-dark); margin-bottom:var(--space-lg); text-transform: none;">你的信息已保存到本地。</p>
+      <button class="btn" id="modal-close-btn">确定</button>
+    </div>
+  </div>
+
+  <script type="module" src="../js/post.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <pattern id="canvas" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="none" stroke="#333" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#0a0a0a"/>
+  <rect width="800" height="400" fill="url(#canvas)"/>
+  <!-- 装饰 -->
+  <rect x="0" y="340" width="800" height="60" fill="#FFD600"/>
+  <!-- 调色板装饰 -->
+  <circle cx="640" cy="150" r="45" fill="#FFD600" opacity="0.9"/>
+  <circle cx="700" cy="120" r="30" fill="#fff" opacity="0.8"/>
+  <circle cx="720" cy="180" r="25" fill="#666" opacity="0.7"/>
+  <circle cx="660" cy="210" r="20" fill="#b0b0b0" opacity="0.6"/>
+  <!-- 画笔装饰 -->
+  <line x1="500" y1="60" x2="580" y2="250" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="495,55 505,55 500,40" fill="#FFD600"/>
+  <!-- 装饰图案 -->
+  <rect x="480" y="260" width="80" height="80" fill="none" stroke="#FFD600" stroke-width="3" opacity="0.4" transform="rotate(15 520 300)"/>
+  <circle cx="620" cy="280" r="35" fill="none" stroke="#FFD600" stroke-width="3" opacity="0.3"/>
+  <!-- 标题 -->
+  <text x="40" y="150" fill="#fff" font-family="system-ui" font-size="52" font-weight="900" letter-spacing="2">广告设计</text>
+  <text x="40" y="200" fill="#FFD600" font-family="system-ui" font-size="24" font-weight="700">全国大学生广告设计大赛</text>
+  <text x="40" y="240" fill="#aaa" font-family="system-ui" font-size="14" opacity="0.5">NATIONAL ADVERTISING DESIGN CONTEST</text>
+  <!-- 底部标签 -->
+  <text x="40" y="370" fill="#0a0a0a" font-family="system-ui" font-size="16" font-weight="900">平面设计 · 视频创意 · 交互体验</text>
+</svg>

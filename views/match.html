@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>找队友 — 竞赛组队平台</title>
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/components.css">
+  <link rel="stylesheet" href="../assets/styles/pages.css">
+</head>
+<body>
+  <main class="site-main">
+    <!-- 竞赛信息头 -->
+    <section class="match-hero" id="match-hero">
+      <div class="container">
+        <div class="match-hero__tags" id="match-tags"></div>
+        <h1 id="match-title">加载中...</h1>
+        <p id="match-description" style="max-width: 700px; margin-top: 16px; color: var(--color-gray-mid); text-transform: none;"></p>
+        <div class="match-hero__countdown" id="match-countdown">
+          加载中...
+        </div>
+      </div>
+    </section>
+
+    <!-- 竞赛筛选 -->
+    <section class="match-filter-section">
+      <div class="container">
+        <h3 class="match-filter-section__title">选择竞赛</h3>
+        <div class="competition-filter-bar" id="competition-filter">
+          <!-- JS 动态渲染竞赛筛选 tabs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 组队列表 -->
+    <section class="match-content">
+      <div class="container">
+        <div class="match-content__header">
+          <h3 id="team-section-title">组队招募</h3>
+          <div style="display: flex; align-items: center; gap: var(--space-md);">
+            <div class="filter-bar" id="skill-filter-bar">
+              <span class="tag tag--active" data-filter="all">全部</span>
+            </div>
+            <a href="post.html" class="btn btn--sm">发布组队</a>
+          </div>
+        </div>
+        <div class="grid grid--2" id="team-list">
+          <!-- JS 动态渲染 -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../js/match.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <pattern id="binary" x="0" y="0" width="100" height="20" patternUnits="userSpaceOnUse">
+      <text x="5" y="15" fill="#FFD600" font-family="monospace" font-size="11" opacity="0.1">01101001</text>
+    </pattern>
+  </defs>
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="#0a0a0a"/>
+  <rect width="800" height="400" fill="url(#binary)"/>
+  <!-- 装饰 -->
+  <rect x="0" y="340" width="800" height="60" fill="#FFD600"/>
+  <!-- 电脑/屏幕图标 -->
+  <rect x="540" y="60" width="200" height="140" fill="none" stroke="#FFD600" stroke-width="4"/>
+  <rect x="555" y="75" width="170" height="100" fill="#111"/>
+  <!-- 屏幕内容 -->
+  <text x="565" y="95" fill="#FFD600" font-family="monospace" font-size="11">&lt;html&gt;</text>
+  <text x="575" y="112" fill="#4CAF50" font-family="monospace" font-size="11">&lt;body&gt;</text>
+  <text x="585" y="129" fill="#2196F3" font-family="monospace" font-size="11">&lt;div&gt;</text>
+  <text x="585" y="146" fill="#FF9800" font-family="monospace" font-size="11">  Hello!</text>
+  <text x="575" y="163" fill="#4CAF50" font-family="monospace" font-size="11">&lt;/body&gt;</text>
+  <!-- 屏幕底座 -->
+  <line x1="600" y1="200" x2="600" y2="220" stroke="#FFD600" stroke-width="4"/>
+  <line x1="570" y1="220" x2="670" y2="220" stroke="#FFD600" stroke-width="4" stroke-linecap="round"/>
+  <!-- 芯片装饰 -->
+  <rect x="620" y="250" width="50" height="50" fill="none" stroke="#FFD600" stroke-width="3" opacity="0.4"/>
+  <line x1="630" y1="250" x2="630" y2="240" stroke="#FFD600" stroke-width="2" opacity="0.3"/>
+  <line x1="645" y1="250" x2="645" y2="240" stroke="#FFD600" stroke-width="2" opacity="0.3"/>
+  <line x1="660" y1="250" x2="660" y2="240" stroke="#FFD600" stroke-width="2" opacity="0.3"/>
+  <line x1="630" y1="300" x2="630" y2="310" stroke="#FFD600" stroke-width="2" opacity="0.3"/>
+  <line x1="645" y1="300" x2="645" y2="310" stroke="#FFD600" stroke-width="2" opacity="0.3"/>
+  <line x1="660" y1="300" x2="660" y2="310" stroke="#FFD600" stroke-width="2" opacity="0.3"/>
+  <!-- 标题 -->
+  <text x="40" y="150" fill="#fff" font-family="system-ui" font-size="44" font-weight="900" letter-spacing="2">计算机设计</text>
+  <text x="40" y="200" fill="#FFD600" font-family="system-ui" font-size="22" font-weight="700">中国大学生计算机设计大赛</text>
+  <text x="40" y="240" fill="#aaa" font-family="system-ui" font-size="14" opacity="0.5">CHINA COLLEGE COMPUTER DESIGN CONTEST</text>
+  <!-- 底部标签 -->
+  <text x="40" y="370" fill="#0a0a0a" font-family="system-ui" font-size="16" font-weight="900">软件开发 · 人工智能 · 物联网应用</text>
+</svg>
